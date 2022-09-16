@@ -64,15 +64,19 @@ function App() {
           </form>
         </div>
 
-        <div className='recipe-gallery'>
-          {recipes.map(recipe => (
-            <RecipeCard 
-              key={recipe.recipe.label}
-              title={recipe.recipe.label} 
-              type={recipe.recipe.dishType}
-              image={recipe.recipe.images.REGULAR.url}
-            />
-          ))}
+        <div className='reloadDiv'>  {/*I want to realod this div w/new content*/}
+        
+          <div className='recipe-gallery'>
+            {recipes.map(recipe => (
+              <RecipeCard 
+                key={recipe.recipe.label}
+                title={recipe.recipe.label} 
+                type={recipe.recipe.dishType}
+                image={recipe.recipe.images.REGULAR.url}
+              />
+            ))}
+          </div>
+
         </div>
 
       </main>

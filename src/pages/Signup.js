@@ -1,8 +1,12 @@
 import React from 'react';
+import Header from '../Header';
 
 const Signup = () => {
     return (
-        <h1 className=''>NEW PAGE!</h1>
+        <div>
+            <Header />
+            <h1>NEW PAGE!</h1>
+        </div>
     );
 }
 
