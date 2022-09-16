@@ -1,0 +1,11 @@
+.recipeCard {
+    flex: 0 0 33%;
+    background-color: white;
+    margin-bottom: 100px;
+}
+.container {
+    width: 80%;
+}
+.link {
+    display: block;
+}

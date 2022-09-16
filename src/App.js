@@ -1,7 +1,15 @@
 import React,{useEffect, useState} from 'react';
 // import logo from './logo.svg';
 import RecipeCard from './Recipe';
+import Header from './Header';
+import Footer from './Footer';
+import Main from './Main';
 import './App.css';
+
+
+
+
+
 
 function App() {
   const ID = process.env.REACT_APP_ID;
@@ -21,6 +29,7 @@ function App() {
     const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${ID}&app_key=${KEY}`);    
     const data = await response.json();
     setRecipes(data.hits);
+    console.log(data.hits);
   }
 
   const updateSearch = e => {
@@ -35,27 +44,43 @@ function App() {
 
 
 
+
+
+
+  
   return (
     <div className='App'>
-      <h1>Recipe App</h1>
+      <header>
+        <Header />
+      </header>
 
-      <main>
-        <form className='search-form' onSubmit={getSearch}>
-          <input className='search-bar' type='text' value={search} onChange={updateSearch} />
-          <button className='search-button' type='submit'>Search</button>
-        </form>
+
+      <main className='main'>
+        <div className='search-container'>
+          <h1>Recipe App</h1>
+          <h2 className='subtitle'>Description text</h2>
+          <form className='search-form' onSubmit={getSearch}>
+            <input className='search-bar' type='text' value={search} onChange={updateSearch} />
+            <button className='search-button' type='submit'>Search</button>
+          </form>
+        </div>
 
         <div className='recipe-gallery'>
           {recipes.map(recipe => (
             <RecipeCard 
               key={recipe.recipe.label}
               title={recipe.recipe.label} 
-              calories={recipe.recipe.calories} 
-              image={recipe.recipe.images.THUMBNAIL.url}
+              type={recipe.recipe.dishType}
+              image={recipe.recipe.images.REGULAR.url}
             />
           ))}
         </div>
+
+        <Main />
       </main>
+
+
+      <Footer />
     </div>
   );
 }

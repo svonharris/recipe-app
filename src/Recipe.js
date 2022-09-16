@@ -1,23 +1,18 @@
-import React from "react";
-
-
-// const RecipeCard = ({title, calories, image}) => {
-//     return (
-//         <div className="recipe-card">
-//             <div className="recipe-card-title">{title}</div>
-//             <p className="recipe-card-calories">{calories}</p>
-//             <img className="recipe-card-img" src={image} />
-//         </div>
-//     );
-// }
+import React from 'react';
+import style from './recipe.module.css';
+import Main from './Main';
+import { Link } from "react-router-dom";
 
 
 const RecipeCard = (props) => {
     return (
-        <div className="recipe-card">
-            <div className="recipe-card-title">{props.title}</div>
-            <p className="recipe-card-calories">{props.calories}</p>
-            <img className="recipe-card-img" src={props.image} />
+        <div className={style.recipeCard}>
+            <a href={props.link} className={style.link}>
+                <img className={style.img} src={props.image} />
+            </a>
+            <h3 className={style.title}>{props.title}</h3>
+            <p className={style.type}>{props.type}</p>
+            <Link to="/signup" className={style.readMore}>Read more</Link>
         </div>
     );
 }
