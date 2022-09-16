@@ -4,8 +4,9 @@ import RecipeCard from './Recipe';
 import './App.css';
 
 function App() {
+  const ID = process.env.REACT_APP_ID;
+  const KEY = process.env.REACT_APP_KEY;
 
-  
   
   const [recipes, setRecipes ] = useState([]); //update recipes variable w/API response
   const [search, setSearch] = useState(''); //update search variable w/search keyword
@@ -17,10 +18,9 @@ function App() {
  
 
   const getRecipes = async () => { //GET call to Edamam API 
-    const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
+    const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${ID}&app_key=${KEY}`);    
     const data = await response.json();
     setRecipes(data.hits);
-    // console.log(data.hits);
   }
 
   const updateSearch = e => {
