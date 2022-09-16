@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './recipe.module.css';
-import Main from './Main';
 import { Link } from "react-router-dom";
 
 

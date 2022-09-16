@@ -3,7 +3,6 @@ import React,{useEffect, useState} from 'react';
 import RecipeCard from './Recipe';
 import Header from './Header';
 import Footer from './Footer';
-import Main from './Main';
 import './App.css';
 
 
@@ -76,7 +75,6 @@ function App() {
           ))}
         </div>
 
-        <Main />
       </main>
 
 
