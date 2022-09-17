@@ -1,0 +1,23 @@
+.searchContainer {
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(137,137,137,.6);
+    margin: 50px 0px;
+  }
+  .search-form {
+    width: 100%;
+  }
+  .search-bar {
+    width: 50%;
+    border: none;
+    padding: 10px;
+  }
+  .search-button {
+    color: white;
+    background-color: coral;
+    border: none;
+    padding: 10px 20px;
+  }
