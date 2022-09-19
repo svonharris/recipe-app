@@ -1,6 +1,9 @@
 import React,{useEffect, useState} from 'react';
 import style from './searchform.module.css';
 import RecipeCard from './Recipe';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+
 
 
 
@@ -39,11 +42,10 @@ const SearchForm = (props) => {
     return (
         <div>
             <div className={style.searchContainer}>
-                <h1>Recipe App</h1>
-                <h2 className='subtitle'>Description text</h2>
-                <form className='search-form' onSubmit={getSearch}>
-                    <input className='search-bar' type='text' value={search} onChange={updateSearch} />
-                    <button className='search-button' type='submit'>Search</button>
+                <h2 className={style.subtitle}>Enter a food keyword into the search field and hit "SEARCH".</h2>
+                <form className={style.searchForm} onSubmit={getSearch}>
+                    <TextField className={style.searchField}  id="outlined-basic" placeholder="ie. pumpkin" variant="outlined" value={search} onChange={updateSearch} />
+                    <Button variant="outlined" className={style.searchButton} onClick={getSearch} size="large">Search</Button>
                 </form>
             </div>
 

@@ -5,7 +5,9 @@ import style from './footer.module.css';
 
 const Footer = () => {
     return (
-        <div className={style.footer}></div>
+        <p className={style.footer}>
+            &copy; 2022 Recipe App
+        </p>
     )
 }
 

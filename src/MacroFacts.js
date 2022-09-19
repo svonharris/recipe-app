@@ -5,10 +5,8 @@ const MacroFacts = (props) => {
 
 
     return (
-        <div className=''>
-            <p className=''>{props.macro}</p>
-            <p className=''>{props.total}</p>
-        </div>
+            <p>{Math.round(props.total)} {props.macro} </p>
+
     );
 }
 

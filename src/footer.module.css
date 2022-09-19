@@ -1,4 +1,6 @@
 .footer {
     min-height: 50px;
-    background-color: midnightblue;
+    box-shadow: 0 -1px #ddd;
+    padding: 10px 0;
+    line-height: 50px;
 }

@@ -8,21 +8,29 @@ const RecipeCard = (props) => {
 
     return (
         <div className={style.recipeCard}>
-            <a href={props.link} className={style.link}>
-                <img className={style.img} src={props.image} />
-            </a>
-            <h3 className={style.title}>{props.title}</h3>
-            <p className={style.type}>{props.type}</p>
-            <p>Serving Size: {props.servings}</p>
-            {props.ingredients.map(ingredient => (
-                <li>{ingredient.text}</li>
-            ))}
-            {props.macros.map((macro) => (
-                macro.label === 'Fat' || macro.label === 'Carbs' || macro.label === 'Protein'
-                ? (<MacroFacts macro={macro.label} total={macro.total} key={macro.id} />)
-                : null
-            ))}
-            <div className={style.readMore}>Read more</div>
+            <div className={style.recipeContainer}>
+                <div className={style.recipeMedia}>
+                    <img className={style.img} src={props.image} />
+                </div>
+                <div className={style.recipeContent}>
+                    <h3 className={style.title}>{props.title}</h3>
+                    <p className={style.serving}>Serving size: {props.servings}</p>
+                    <p>Calories: {Math.round(props.calories)}</p>
+                    <ul className={style.macroList}>
+                        {props.macros.map((macro) => (
+                            macro.label === 'Fat' || macro.label === 'Carbs' || macro.label === 'Protein'
+                            ? ( <li><MacroFacts calories={props.calories} macro={macro.label} total={macro.total} key={macro.id} /> </li>)
+                            : null
+                        ))}
+                    </ul>
+                    <h3 className={style.subheading}>Ingredients:</h3>
+                    <ul className={style.ingredientList}>
+                        {props.ingredients.map(ingredient => (
+                            <li className={style.ingredientItem}>{ingredient.text}</li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
         </div>
     );
 }
