@@ -7,9 +7,9 @@
   /* background-color: rgba(137,137,137,.6); */
 }
 .subtitle {
-  font-size: 20px;
+  font-size: 1em;
   font-style: italic;
-  margin-bottom: 40px;
+  margin: 0 0 30px;
 }
 .searchForm {
   width: 100%;

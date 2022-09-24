@@ -1,8 +1,7 @@
 import React from 'react';
-import style from './header.module.css';
+import style from './styles/header.module.css';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 
 
 const Header = () => {
@@ -10,10 +9,9 @@ const Header = () => {
     return (
         <AppBar position="static" className={style.header}>
             <Toolbar>
-                <Typography component="div" sx={{ flexGrow: 1 }}>
-                    Recipe App <br></br>
-                    <i>Build a food recipe application.</i>
-                </Typography>
+                <h1 style={{
+                    width: '100%'
+                }}>Recipe App</h1>
             </Toolbar>
         </AppBar>
     )

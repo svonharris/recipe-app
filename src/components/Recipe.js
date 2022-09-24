@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './recipe.module.css';
+import style from './styles/recipe.module.css';
 import MacroFacts from './MacroFacts';
 
 
@@ -10,7 +10,7 @@ const RecipeCard = (props) => {
         <div className={style.recipeCard}>
             <div className={style.recipeContainer}>
                 <div className={style.recipeMedia}>
-                    <img className={style.img} src={props.image} />
+                    <img className={style.img} src={props.image} alt={'Image of ' + props.title} />
                 </div>
                 <div className={style.recipeContent}>
                     <h3 className={style.title}>{props.title}</h3>

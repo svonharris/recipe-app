@@ -1,8 +1,8 @@
 import React from 'react';
 // import logo from './logo.svg';
-import Header from './Header';
-import Footer from './Footer';
-import SearchForm from './SearchForm';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import SearchForm from './components/SearchForm';
 import './App.css';
 
 
