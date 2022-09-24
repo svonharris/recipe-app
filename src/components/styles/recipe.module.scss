@@ -1,17 +1,12 @@
 .recipeCard {
-    flex: 0 0 50%;
-    background-color: white;
+    flex: 1 1 50%;
+    background-color: var(--color-white);
+    padding: 0 15px;
     margin-bottom: 100px;
-}
-.recipeCard:nth-child(odd) {
-    padding-right: 40px;
-}
-.recipeCard:nth-child(even) {
-    padding-left: 40px;
 }
 .recipeContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: .5fr 1fr;
     grid-template-rows: auto;
     column-gap: 30px;
 }

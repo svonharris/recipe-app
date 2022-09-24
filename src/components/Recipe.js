@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './styles/recipe.module.css';
+import style from './styles/recipe.module.scss';
 import MacroFacts from './MacroFacts';
 
 

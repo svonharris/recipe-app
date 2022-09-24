@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react';
-import style from './styles/searchform.module.css';
+import style from './styles/searchform.module.scss';
 import RecipeCard from './Recipe';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -39,6 +39,8 @@ const SearchForm = (props) => {
     }
 
 
+
+    
     return (
         <div>
             <div className={style.searchContainer}>
@@ -49,6 +51,7 @@ const SearchForm = (props) => {
                     <Button variant="outlined" className={style.searchButton} onClick={getSearch} size="large">Search</Button>
                 </form>
             </div>
+            
 
             <div className='recipe-gallery'>
             {recipes.map(recipe => (

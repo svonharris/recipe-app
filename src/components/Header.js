@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './styles/header.module.css';
+import style from './styles/header.module.scss';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 
