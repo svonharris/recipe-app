@@ -4,7 +4,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: rgba(137,137,137,.6); */
+  background-color: var(--color-white);
+}
+.title {
+  letter-spacing: .08em;
+  font-weight: 500;
 }
 .subtitle {
   font-size: 1em;
@@ -35,7 +39,7 @@
   background-color: #1c1b1b;
   border-radius: 0;
   padding: 12px 20px;
-  font-size: 12px;
+  font-size: .75em;
   text-align: center;
   letter-spacing: 0.2em;
 }

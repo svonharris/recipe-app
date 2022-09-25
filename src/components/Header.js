@@ -8,10 +8,8 @@ const Header = () => {
 
     return (
         <AppBar position="static" className={style.header}>
-            <Toolbar>
-                <h1 style={{
-                    width: '100%'
-                }}>Recipe App</h1>
+            <Toolbar className={style.nav}>
+                <h1 className={style.title}>Recipe App</h1>
             </Toolbar>
         </AppBar>
     )

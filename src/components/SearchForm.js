@@ -44,7 +44,7 @@ const SearchForm = (props) => {
     return (
         <div>
             <div className={style.searchContainer}>
-                <h2>Find a recipe. Prepare a meal.</h2>
+                <h2 className={style.title}>Find a recipe. Prepare a meal.</h2>
                 <p className={style.subtitle}>Enter a food keyword into the search field and hit "SEARCH".</p>
                 <form className={style.searchForm} onSubmit={getSearch}>
                     <TextField className={style.searchField}  id="outlined-basic" placeholder="ie. pumpkin" variant="outlined" value={search} onChange={updateSearch} />
@@ -52,21 +52,22 @@ const SearchForm = (props) => {
                 </form>
             </div>
             
-
-            <div className='recipe-gallery'>
-            {recipes.map(recipe => (
-              <RecipeCard
-                key={recipe.recipe.id}
-                title={recipe.recipe.label} 
-                type={recipe.recipe.dishType}
-                image={recipe.recipe.images.REGULAR.url}
-                calories={recipe.recipe.calories}
-                macros={recipe.recipe.digest}
-                ingredients={recipe.recipe.ingredients}
-                servings={recipe.recipe.yield}
-              />
-            ))}
-          </div>
+            {/* <div className='recipe-container'> */}
+                <div className='recipe-gallery'>
+                    {recipes.map((recipe, index) => 
+                        <RecipeCard
+                            key={index}
+                            title={recipe.recipe.label} 
+                            type={recipe.recipe.dishType}
+                            image={recipe.recipe.images.REGULAR.url}
+                            calories={recipe.recipe.calories}
+                            macros={recipe.recipe.digest}
+                            ingredients={recipe.recipe.ingredients}
+                            servings={recipe.recipe.yield}
+                        />
+                    )}
+                </div>
+            {/* </div> */}
         </div>
     );
 }
